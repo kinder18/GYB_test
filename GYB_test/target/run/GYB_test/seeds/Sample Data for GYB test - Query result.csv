@@ -1,0 +1,11 @@
+
+    
+    
+    truncate table "dev"."main"."Sample Data for GYB test - Query result";
+    -- dbt seed --
+    
+          COPY "dev"."main"."Sample Data for GYB test - Query result" FROM 'C:\Users\Yara\Desktop\test_dbt\GYB_test\seeds\Sample Data for GYB test - Query result.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

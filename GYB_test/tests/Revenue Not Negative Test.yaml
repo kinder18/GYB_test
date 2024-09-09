@@ -1,0 +1,7 @@
+tests:
+  - name: non_negative_revenue
+    description: "Ensure that total revenue is non-negative"
+    sql: |
+      select *
+      from {{ ref('fct_sales') }}
+      where total_revenue < 0

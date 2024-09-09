@@ -1,0 +1,1980 @@
+[0m17:57:30.191297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000154CE1643E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000154CE167A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000154CE0464B0>]}
+
+
+============================== 17:57:30.195442 | 335db29e-b53d-45de-8b0a-b916e9bc147d ==============================
+[0m17:57:30.195442 [info ] [MainThread]: Running with dbt=1.8.6
+[0m17:57:30.195720 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:57:30.217611 [info ] [MainThread]: dbt version: 1.8.6
+[0m17:57:30.217611 [info ] [MainThread]: python version: 3.12.5
+[0m17:57:30.218608 [info ] [MainThread]: python path: C:\Users\Yara\dbt-venv\Scripts\python.exe
+[0m17:57:30.218608 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m17:57:30.324639 [info ] [MainThread]: Using profiles dir at C:\Users\Yara\.dbt
+[0m17:57:30.325636 [info ] [MainThread]: Using profiles.yml file at C:\Users\Yara\.dbt\profiles.yml
+[0m17:57:30.325636 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Yara\Desktop\test_dbt\GYB_test\dbt_project.yml
+[0m17:57:30.342053 [info ] [MainThread]: adapter type: duckdb
+[0m17:57:30.342053 [info ] [MainThread]: adapter version: 1.8.3
+[0m17:57:30.416236 [info ] [MainThread]: Configuration:
+[0m17:57:30.416236 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:57:30.417273 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:57:30.417954 [info ] [MainThread]: Required dependencies:
+[0m17:57:30.417954 [debug] [MainThread]: Executing "git --help"
+[0m17:57:30.444965 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:57:30.444965 [debug] [MainThread]: STDERR: "b''"
+[0m17:57:30.444965 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:57:30.446083 [info ] [MainThread]: Connection:
+[0m17:57:30.446083 [info ] [MainThread]:   database: dev
+[0m17:57:30.446083 [info ] [MainThread]:   schema: main
+[0m17:57:30.447126 [info ] [MainThread]:   path: dev.duckdb
+[0m17:57:30.447126 [info ] [MainThread]:   config_options: None
+[0m17:57:30.447126 [info ] [MainThread]:   extensions: None
+[0m17:57:30.448336 [info ] [MainThread]:   settings: {}
+[0m17:57:30.448336 [info ] [MainThread]:   external_root: .
+[0m17:57:30.449336 [info ] [MainThread]:   use_credential_provider: None
+[0m17:57:30.449336 [info ] [MainThread]:   attach: None
+[0m17:57:30.449336 [info ] [MainThread]:   filesystems: None
+[0m17:57:30.450449 [info ] [MainThread]:   remote: None
+[0m17:57:30.450449 [info ] [MainThread]:   plugins: None
+[0m17:57:30.451462 [info ] [MainThread]:   disable_transactions: False
+[0m17:57:30.451536 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m17:57:30.452669 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m17:57:31.965782 [debug] [MainThread]: Using duckdb connection "debug"
+[0m17:57:31.965782 [debug] [MainThread]: On debug: select 1 as id
+[0m17:57:31.966796 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:57:31.983031 [debug] [MainThread]: SQL status: OK in 0.017 seconds
+[0m17:57:31.984078 [debug] [MainThread]: On debug: Close
+[0m17:57:31.986210 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:57:31.987208 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:57:31.988235 [debug] [MainThread]: Command `dbt debug` succeeded at 17:57:31.988235 after 1.92 seconds
+[0m17:57:31.988235 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:57:31.988235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000154CDCA7620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000154CDCA42C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000154CEE955E0>]}
+[0m17:57:31.989305 [debug] [MainThread]: Flushing usage events
+[0m17:58:02.735050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C4CDA3CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C49697BC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C4BEFFC80>]}
+
+
+============================== 17:58:02.735050 | 08480849-4175-4f9f-a47b-0a9ccd0d52a4 ==============================
+[0m17:58:02.735050 [info ] [MainThread]: Running with dbt=1.8.6
+[0m17:58:02.735050 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt seed', 'send_anonymous_usage_stats': 'True'}
+[0m17:58:02.953779 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '08480849-4175-4f9f-a47b-0a9ccd0d52a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C4D0EBE00>]}
+[0m17:58:03.000637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '08480849-4175-4f9f-a47b-0a9ccd0d52a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C4CDF56D0>]}
+[0m17:58:03.000637 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m17:58:03.016267 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m17:58:03.016267 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m17:58:03.016267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '08480849-4175-4f9f-a47b-0a9ccd0d52a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C4D8995E0>]}
+[0m17:58:04.718959 [warn ] [MainThread]: [[33mWARNING[0m]: Found spaces in the name of `analysis.GYB_test.Agent
+Performance`
+[0m17:58:04.718959 [warn ] [MainThread]: [[33mWARNING[0m]: Spaces found in 4 resource name(s). This is deprecated, and
+may lead to errors when using dbt. For more information: https://docs.getdbt.com
+/reference/global-configs/legacy-behaviors#require_resource_names_without_spaces
+Run again with `--debug` to see them all.
+[0m17:58:04.718959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '08480849-4175-4f9f-a47b-0a9ccd0d52a4', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C4D961790>]}
+[0m17:58:04.734581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '08480849-4175-4f9f-a47b-0a9ccd0d52a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C4DDB6C60>]}
+[0m17:58:04.875207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '08480849-4175-4f9f-a47b-0a9ccd0d52a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C4E1EB920>]}
+[0m17:58:04.890796 [info ] [MainThread]: Found 3 models, 3 analyses, 1 seed, 4 data tests, 410 macros
+[0m17:58:04.890796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '08480849-4175-4f9f-a47b-0a9ccd0d52a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C4E420C80>]}
+[0m17:58:04.890796 [info ] [MainThread]: 
+[0m17:58:04.890796 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:58:04.890796 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m17:58:04.953315 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m17:58:04.953315 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"dev"'
+    
+  
+  
+[0m17:58:04.953315 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:58:04.968951 [debug] [ThreadPool]: SQL status: OK in 0.014 seconds
+[0m17:58:04.968951 [debug] [ThreadPool]: On list_dev: Close
+[0m17:58:04.968951 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m17:58:04.968951 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m17:58:04.968951 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m17:58:04.968951 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='dev'
+        and type='sqlite'
+    
+  
+[0m17:58:04.968951 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:58:04.984554 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m17:58:04.984554 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m17:58:04.984554 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m17:58:04.984554 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:58:04.984554 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m17:58:04.984554 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m17:58:04.984554 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:58:04.984554 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m17:58:04.984554 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m17:58:04.984554 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m17:58:04.984554 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:58:04.984554 [debug] [ThreadPool]: On create_dev_main: Close
+[0m17:58:05.000178 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m17:58:05.000178 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m17:58:05.000178 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m17:58:05.000178 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:58:05.000178 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m17:58:05.000178 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m17:58:05.000178 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'dev'
+  
+[0m17:58:05.047008 [debug] [ThreadPool]: SQL status: OK in 0.042 seconds
+[0m17:58:05.047008 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m17:58:05.047008 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m17:58:05.047008 [debug] [ThreadPool]: On list_dev_main: Close
+[0m17:58:05.062629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '08480849-4175-4f9f-a47b-0a9ccd0d52a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C4E802660>]}
+[0m17:58:05.062629 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:58:05.062629 [debug] [MainThread]: On master: BEGIN
+[0m17:58:05.062629 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:58:05.062629 [debug] [MainThread]: SQL status: OK in 0.008 seconds
+[0m17:58:05.062629 [debug] [MainThread]: On master: COMMIT
+[0m17:58:05.062629 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:58:05.062629 [debug] [MainThread]: On master: COMMIT
+[0m17:58:05.062629 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:58:05.062629 [debug] [MainThread]: On master: Close
+[0m17:58:05.062629 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:58:05.062629 [info ] [MainThread]: 
+[0m17:58:05.078251 [debug] [Thread-1 (]: Began running node seed.GYB_test.Sample Data for GYB test - Query result
+[0m17:58:05.078251 [info ] [Thread-1 (]: 1 of 1 START seed file main.Sample Data for GYB test - Query result ............ [RUN]
+[0m17:58:05.078251 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.GYB_test.Sample Data for GYB test - Query result'
+[0m17:58:05.078251 [debug] [Thread-1 (]: Began compiling node seed.GYB_test.Sample Data for GYB test - Query result
+[0m17:58:05.078251 [debug] [Thread-1 (]: Began executing node seed.GYB_test.Sample Data for GYB test - Query result
+[0m17:58:05.125149 [debug] [Thread-1 (]: Using duckdb connection "seed.GYB_test.Sample Data for GYB test - Query result"
+[0m17:58:05.125149 [debug] [Thread-1 (]: On seed.GYB_test.Sample Data for GYB test - Query result: BEGIN
+[0m17:58:05.125149 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:58:05.125149 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m17:58:05.125149 [debug] [Thread-1 (]: Using duckdb connection "seed.GYB_test.Sample Data for GYB test - Query result"
+[0m17:58:05.125149 [debug] [Thread-1 (]: On seed.GYB_test.Sample Data for GYB test - Query result: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "seed.GYB_test.Sample Data for GYB test - Query result"} */
+
+    create table "dev"."main"."Sample Data for GYB test - Query result" ("Reference ID" text,"Country" text,"Product Code" text,"Product Name" text,"Subscription Start Date" text,"Subscription Deactivation Date" text,"Subscription Duration Months" integer,"Order Date Kyiv" text,"Return Date Kyiv" text,"Last Rebill Date Kyiv" text,"Has Chargeback" text,"Has Refund" text,"Sales Agent Name" text,"Source" text,"Campaign Name" text,"Total Amount ($)" float8,"Discount Amount ($)" float8,"Number Of Rebills" integer,"Original Amount ($)" float8,"Returned Amount ($)" float8,"Total Rebill Amount" float8)
+  
+[0m17:58:05.125149 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:58:05.140768 [debug] [Thread-1 (]: Using duckdb connection "seed.GYB_test.Sample Data for GYB test - Query result"
+[0m17:58:05.140768 [debug] [Thread-1 (]: On seed.GYB_test.Sample Data for GYB test - Query result: 
+          COPY "dev"."main"."Sample Data for GYB test - Query result" FROM 'C:\Users\Yara\Desktop\test_dbt\GYB_test\seeds\Sample Data for GYB test - Query result.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m17:58:05.156389 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m17:58:05.156389 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.GYB_test.Sample Data for GYB test - Query result"
+[0m17:58:05.171980 [debug] [Thread-1 (]: On seed.GYB_test.Sample Data for GYB test - Query result: COMMIT
+[0m17:58:05.171980 [debug] [Thread-1 (]: Using duckdb connection "seed.GYB_test.Sample Data for GYB test - Query result"
+[0m17:58:05.171980 [debug] [Thread-1 (]: On seed.GYB_test.Sample Data for GYB test - Query result: COMMIT
+[0m17:58:05.171980 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m17:58:05.171980 [debug] [Thread-1 (]: On seed.GYB_test.Sample Data for GYB test - Query result: Close
+[0m17:58:05.203223 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '08480849-4175-4f9f-a47b-0a9ccd0d52a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C499E1130>]}
+[0m17:58:05.203223 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file main.Sample Data for GYB test - Query result ........ [[32mINSERT 499[0m in 0.12s]
+[0m17:58:05.203223 [debug] [Thread-1 (]: Finished running node seed.GYB_test.Sample Data for GYB test - Query result
+[0m17:58:05.203223 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:58:05.203223 [debug] [MainThread]: On master: BEGIN
+[0m17:58:05.203223 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:58:05.218874 [debug] [MainThread]: SQL status: OK in 0.013 seconds
+[0m17:58:05.218874 [debug] [MainThread]: On master: COMMIT
+[0m17:58:05.218874 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:58:05.218874 [debug] [MainThread]: On master: COMMIT
+[0m17:58:05.218874 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:58:05.218874 [debug] [MainThread]: On master: Close
+[0m17:58:05.218874 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:58:05.218874 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m17:58:05.218874 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m17:58:05.218874 [debug] [MainThread]: Connection 'seed.GYB_test.Sample Data for GYB test - Query result' was properly closed.
+[0m17:58:05.218874 [info ] [MainThread]: 
+[0m17:58:05.218874 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 0.33 seconds (0.33s).
+[0m17:58:05.218874 [debug] [MainThread]: Command end result
+[0m17:58:05.250119 [info ] [MainThread]: 
+[0m17:58:05.250119 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:58:05.250119 [info ] [MainThread]: 
+[0m17:58:05.250119 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m17:58:05.250119 [debug] [MainThread]: Command `dbt seed` succeeded at 17:58:05.250119 after 2.59 seconds
+[0m17:58:05.250119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C4B840AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C4CF96000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C4CF95730>]}
+[0m17:58:05.250119 [debug] [MainThread]: Flushing usage events
+[0m17:59:32.438306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026253648C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026252764B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026252765CD0>]}
+
+
+============================== 17:59:32.441710 | 9f805a3f-a89e-4825-890a-cc213750ccea ==============================
+[0m17:59:32.441710 [info ] [MainThread]: Running with dbt=1.8.6
+[0m17:59:32.441710 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt seed', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:59:32.445613 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m17:59:32.445613 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "GYB_test", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+[0m17:59:32.446610 [debug] [MainThread]: Command `dbt seed` failed at 17:59:32.446610 after 0.09 seconds
+[0m17:59:32.447607 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000262561442F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000262561277D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026256173F80>]}
+[0m17:59:32.447607 [debug] [MainThread]: Flushing usage events
+[0m20:50:18.906635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C93BD49E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C94555FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C94555D30>]}
+
+
+============================== 20:50:18.906635 | 7038c094-6d43-4380-8208-96d1e10702f7 ==============================
+[0m20:50:18.906635 [info ] [MainThread]: Running with dbt=1.8.6
+[0m20:50:18.906635 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt seed', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:50:18.906635 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m20:50:18.922256 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "GYB_test", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+[0m20:50:18.923573 [debug] [MainThread]: Command `dbt seed` failed at 20:50:18.923573 after 0.12 seconds
+[0m20:50:18.923573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C961C0500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C95DC94C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C96B079B0>]}
+[0m20:50:18.923573 [debug] [MainThread]: Flushing usage events
+[0m20:51:34.749133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027348FED5E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273487E8830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027345AF5CD0>]}
+
+
+============================== 20:51:34.749133 | 6dd76637-c30a-4a94-99b7-d065d130c210 ==============================
+[0m20:51:34.749133 [info ] [MainThread]: Running with dbt=1.8.6
+[0m20:51:34.749133 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:51:34.749133 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m20:51:34.749133 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "GYB_test", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+[0m20:51:34.759256 [debug] [MainThread]: Command `dbt run` failed at 20:51:34.759256 after 0.10 seconds
+[0m20:51:34.759256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027348B415B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027348B72EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273494B67E0>]}
+[0m20:51:34.760382 [debug] [MainThread]: Flushing usage events
+[0m08:59:34.029863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA11B845C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA0EACD940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA11B85880>]}
+
+
+============================== 08:59:34.038646 | 9c7618ac-f323-40f0-9d59-14c16c629825 ==============================
+[0m08:59:34.038646 [info ] [MainThread]: Running with dbt=1.8.6
+[0m08:59:34.039728 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m08:59:34.434180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9c7618ac-f323-40f0-9d59-14c16c629825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA1209AFF0>]}
+[0m08:59:34.480954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9c7618ac-f323-40f0-9d59-14c16c629825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA0E7E5D60>]}
+[0m08:59:34.495186 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m08:59:34.511564 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m08:59:35.186989 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:59:35.186989 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:59:35.186989 [warn ] [MainThread]: [[33mWARNING[0m]: Found spaces in the name of `analysis.GYB_test.Agent
+Performance`
+[0m08:59:35.187987 [warn ] [MainThread]: [[33mWARNING[0m]: Spaces found in 4 resource name(s). This is deprecated, and
+may lead to errors when using dbt. For more information: https://docs.getdbt.com
+/reference/global-configs/legacy-behaviors#require_resource_names_without_spaces
+Run again with `--debug` to see them all.
+[0m08:59:35.188984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9c7618ac-f323-40f0-9d59-14c16c629825', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA120285C0>]}
+[0m08:59:35.238684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9c7618ac-f323-40f0-9d59-14c16c629825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA0D1A21E0>]}
+[0m08:59:35.461741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9c7618ac-f323-40f0-9d59-14c16c629825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA12834620>]}
+[0m08:59:35.462817 [info ] [MainThread]: Found 3 models, 3 analyses, 1 seed, 4 data tests, 410 macros
+[0m08:59:35.462817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c7618ac-f323-40f0-9d59-14c16c629825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA12988AD0>]}
+[0m08:59:35.465018 [info ] [MainThread]: 
+[0m08:59:35.466116 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m08:59:35.470111 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m08:59:37.022672 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m08:59:37.022672 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"dev"'
+    
+  
+  
+[0m08:59:37.023683 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:59:37.059165 [debug] [ThreadPool]: SQL status: OK in 0.035 seconds
+[0m08:59:37.060162 [debug] [ThreadPool]: On list_dev: Close
+[0m08:59:37.063255 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m08:59:37.064308 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m08:59:37.069403 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m08:59:37.069403 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='dev'
+        and type='sqlite'
+    
+  
+[0m08:59:37.069403 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:59:37.078630 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m08:59:37.079645 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m08:59:37.079645 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m08:59:37.080692 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:59:37.080692 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m08:59:37.080692 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m08:59:37.082745 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m08:59:37.082745 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m08:59:37.083795 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m08:59:37.083795 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m08:59:37.083795 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:59:37.084793 [debug] [ThreadPool]: On create_dev_main: Close
+[0m08:59:37.087914 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m08:59:37.092195 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m08:59:37.092195 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m08:59:37.092195 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:59:37.100704 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m08:59:37.100704 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m08:59:37.101701 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'dev'
+  
+[0m08:59:37.141615 [debug] [ThreadPool]: SQL status: OK in 0.040 seconds
+[0m08:59:37.147759 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m08:59:37.157329 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m08:59:37.157329 [debug] [ThreadPool]: On list_dev_main: Close
+[0m08:59:37.160485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c7618ac-f323-40f0-9d59-14c16c629825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA129A5970>]}
+[0m08:59:37.161482 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:59:37.161482 [debug] [MainThread]: On master: BEGIN
+[0m08:59:37.161482 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:59:37.169918 [debug] [MainThread]: SQL status: OK in 0.008 seconds
+[0m08:59:37.169918 [debug] [MainThread]: On master: COMMIT
+[0m08:59:37.170971 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:59:37.170971 [debug] [MainThread]: On master: COMMIT
+[0m08:59:37.170971 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:59:37.171969 [debug] [MainThread]: On master: Close
+[0m08:59:37.174019 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m08:59:37.174019 [info ] [MainThread]: 
+[0m08:59:37.178113 [debug] [Thread-1 (]: Began running node model.GYB_test.fct_sales
+[0m08:59:37.179143 [info ] [Thread-1 (]: 1 of 3 START sql view model main.fct_sales ..................................... [RUN]
+[0m08:59:37.179143 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.GYB_test.fct_sales'
+[0m08:59:37.180162 [debug] [Thread-1 (]: Began compiling node model.GYB_test.fct_sales
+[0m08:59:37.188297 [debug] [Thread-1 (]: Writing injected SQL for node "model.GYB_test.fct_sales"
+[0m08:59:37.190396 [debug] [Thread-1 (]: Began executing node model.GYB_test.fct_sales
+[0m08:59:37.218160 [debug] [Thread-1 (]: Writing runtime sql for node "model.GYB_test.fct_sales"
+[0m08:59:37.219233 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m08:59:37.220241 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: BEGIN
+[0m08:59:37.220241 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m08:59:37.228533 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m08:59:37.228533 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m08:59:37.229531 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+
+  
+  create view "dev"."main"."fct_sales__dbt_tmp" as (
+    with base_data as (
+    select
+        coalesce("Reference ID", 'N/A') as reference_id,
+        coalesce("Product Name", 'N/A') as product_name,
+        coalesce("Country", 'N/A') as country,
+        coalesce("Campaign Name", 'N/A') as campaign_name,
+        coalesce("Source", 'N/A') as source,
+        coalesce("Total Rebill Amount", 0) + coalesce("Total Amount ($)", 0) - coalesce("Returned Amount ($)", 0) as total_revenue,
+        coalesce("Total Rebill Amount", 0) as rebill_revenue,
+        coalesce("Number Of Rebills", 0) as rebill_count,
+        coalesce("Discount Amount ($)", 0) as discount_amount,
+        coalesce("Returned Amount ($)", 0) as returned_amount,
+        coalesce("Return Date Kyiv", 'N/A') as return_date_kyiv,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as return_date_utc,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as return_date_new_york,
+        coalesce("Order Date Kyiv", 'N/A') as order_date_kyiv,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as order_date_utc,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as order_date_new_york,
+        coalesce(datediff(day, cast("Order Date Kyiv" as timestamp), cast("Return Date Kyiv" as timestamp)), 'N/A') as refund_days_difference
+    from "dev"."main"."Sample Data for GYB test - Query result"
+),
+
+sales_agents as (
+    select
+        coalesce(reference_id, 'N/A') as reference_id,
+        coalesce(string_agg(distinct "Sales Agent Name", ', '), 'N/A') as sales_agents
+    from "dev"."main"."Sample Data for GYB test - Query result"
+    group by reference_id
+)
+
+select
+    b.*,
+    a.sales_agents
+from base_data b
+left join sales_agents a
+on b.reference_id = a.reference_id;
+  );
+
+[0m08:59:37.236752 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+
+  
+  create view "dev"."main"."fct_sales__dbt_tmp" as (
+    with base_data as (
+    select
+        coalesce("Reference ID", 'N/A') as reference_id,
+        coalesce("Product Name", 'N/A') as product_name,
+        coalesce("Country", 'N/A') as country,
+        coalesce("Campaign Name", 'N/A') as campaign_name,
+        coalesce("Source", 'N/A') as source,
+        coalesce("Total Rebill Amount", 0) + coalesce("Total Amount ($)", 0) - coalesce("Returned Amount ($)", 0) as total_revenue,
+        coalesce("Total Rebill Amount", 0) as rebill_revenue,
+        coalesce("Number Of Rebills", 0) as rebill_count,
+        coalesce("Discount Amount ($)", 0) as discount_amount,
+        coalesce("Returned Amount ($)", 0) as returned_amount,
+        coalesce("Return Date Kyiv", 'N/A') as return_date_kyiv,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as return_date_utc,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as return_date_new_york,
+        coalesce("Order Date Kyiv", 'N/A') as order_date_kyiv,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as order_date_utc,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as order_date_new_york,
+        coalesce(datediff(day, cast("Order Date Kyiv" as timestamp), cast("Return Date Kyiv" as timestamp)), 'N/A') as refund_days_difference
+    from "dev"."main"."Sample Data for GYB test - Query result"
+),
+
+sales_agents as (
+    select
+        coalesce(reference_id, 'N/A') as reference_id,
+        coalesce(string_agg(distinct "Sales Agent Name", ', '), 'N/A') as sales_agents
+    from "dev"."main"."Sample Data for GYB test - Query result"
+    group by reference_id
+)
+
+select
+    b.*,
+    a.sales_agents
+from base_data b
+left join sales_agents a
+on b.reference_id = a.reference_id;
+  );
+
+[0m08:59:37.237632 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m08:59:37.237632 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: ROLLBACK
+[0m08:59:37.313654 [debug] [Thread-1 (]: Failed to rollback 'model.GYB_test.fct_sales'
+[0m08:59:37.313654 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: Close
+[0m08:59:37.317804 [debug] [Thread-1 (]: Runtime Error in model fct_sales (models\fct_sales.sql)
+  Parser Error: syntax error at or near ";"
+[0m08:59:37.318854 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c7618ac-f323-40f0-9d59-14c16c629825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA110A68D0>]}
+[0m08:59:37.319852 [error] [Thread-1 (]: 1 of 3 ERROR creating sql view model main.fct_sales ............................ [[31mERROR[0m in 0.14s]
+[0m08:59:37.320859 [debug] [Thread-1 (]: Finished running node model.GYB_test.fct_sales
+[0m08:59:37.320859 [debug] [Thread-1 (]: Began running node model.GYB_test.my_first_dbt_model
+[0m08:59:37.320859 [info ] [Thread-1 (]: 2 of 3 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m08:59:37.322924 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.GYB_test.fct_sales, now model.GYB_test.my_first_dbt_model)
+[0m08:59:37.322924 [debug] [Thread-1 (]: Began compiling node model.GYB_test.my_first_dbt_model
+[0m08:59:37.324974 [debug] [Thread-1 (]: Writing injected SQL for node "model.GYB_test.my_first_dbt_model"
+[0m08:59:37.326022 [debug] [Thread-1 (]: Began executing node model.GYB_test.my_first_dbt_model
+[0m08:59:37.343577 [debug] [Thread-1 (]: Writing runtime sql for node "model.GYB_test.my_first_dbt_model"
+[0m08:59:37.344604 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.my_first_dbt_model"
+[0m08:59:37.345661 [debug] [Thread-1 (]: On model.GYB_test.my_first_dbt_model: BEGIN
+[0m08:59:37.345661 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:59:37.354858 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m08:59:37.354858 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.my_first_dbt_model"
+[0m08:59:37.355875 [debug] [Thread-1 (]: On model.GYB_test.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m08:59:37.359069 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:59:37.364155 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.my_first_dbt_model"
+[0m08:59:37.365152 [debug] [Thread-1 (]: On model.GYB_test.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m08:59:37.366147 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:59:37.380930 [debug] [Thread-1 (]: On model.GYB_test.my_first_dbt_model: COMMIT
+[0m08:59:37.380930 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.my_first_dbt_model"
+[0m08:59:37.382005 [debug] [Thread-1 (]: On model.GYB_test.my_first_dbt_model: COMMIT
+[0m08:59:37.386410 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m08:59:37.390701 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.my_first_dbt_model"
+[0m08:59:37.390701 [debug] [Thread-1 (]: On model.GYB_test.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.my_first_dbt_model"} */
+drop table if exists "dev"."main"."my_first_dbt_model__dbt_backup" cascade
+[0m08:59:37.390701 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:59:37.392892 [debug] [Thread-1 (]: On model.GYB_test.my_first_dbt_model: Close
+[0m08:59:37.404627 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c7618ac-f323-40f0-9d59-14c16c629825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA0E7E4E60>]}
+[0m08:59:37.404627 [info ] [Thread-1 (]: 2 of 3 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.08s]
+[0m08:59:37.405741 [debug] [Thread-1 (]: Finished running node model.GYB_test.my_first_dbt_model
+[0m08:59:37.406739 [debug] [Thread-1 (]: Began running node model.GYB_test.my_second_dbt_model
+[0m08:59:37.406739 [info ] [Thread-1 (]: 3 of 3 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m08:59:37.407736 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.GYB_test.my_first_dbt_model, now model.GYB_test.my_second_dbt_model)
+[0m08:59:37.407736 [debug] [Thread-1 (]: Began compiling node model.GYB_test.my_second_dbt_model
+[0m08:59:37.410813 [debug] [Thread-1 (]: Writing injected SQL for node "model.GYB_test.my_second_dbt_model"
+[0m08:59:37.411811 [debug] [Thread-1 (]: Began executing node model.GYB_test.my_second_dbt_model
+[0m08:59:37.414959 [debug] [Thread-1 (]: Writing runtime sql for node "model.GYB_test.my_second_dbt_model"
+[0m08:59:37.415969 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.my_second_dbt_model"
+[0m08:59:37.415969 [debug] [Thread-1 (]: On model.GYB_test.my_second_dbt_model: BEGIN
+[0m08:59:37.417015 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:59:37.429531 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m08:59:37.429531 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.my_second_dbt_model"
+[0m08:59:37.430545 [debug] [Thread-1 (]: On model.GYB_test.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.my_second_dbt_model"} */
+
+  
+  create view "dev"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m08:59:37.431544 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:59:37.434590 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.my_second_dbt_model"
+[0m08:59:37.435607 [debug] [Thread-1 (]: On model.GYB_test.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m08:59:37.436346 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:59:37.437346 [debug] [Thread-1 (]: On model.GYB_test.my_second_dbt_model: COMMIT
+[0m08:59:37.437346 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.my_second_dbt_model"
+[0m08:59:37.438397 [debug] [Thread-1 (]: On model.GYB_test.my_second_dbt_model: COMMIT
+[0m08:59:37.440448 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m08:59:37.442459 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.my_second_dbt_model"
+[0m08:59:37.442459 [debug] [Thread-1 (]: On model.GYB_test.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.my_second_dbt_model"} */
+drop view if exists "dev"."main"."my_second_dbt_model__dbt_backup" cascade
+[0m08:59:37.443600 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:59:37.444644 [debug] [Thread-1 (]: On model.GYB_test.my_second_dbt_model: Close
+[0m08:59:37.452135 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c7618ac-f323-40f0-9d59-14c16c629825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA1369D340>]}
+[0m08:59:37.453258 [info ] [Thread-1 (]: 3 of 3 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.04s]
+[0m08:59:37.453258 [debug] [Thread-1 (]: Finished running node model.GYB_test.my_second_dbt_model
+[0m08:59:37.454270 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:59:37.455357 [debug] [MainThread]: On master: BEGIN
+[0m08:59:37.455357 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m08:59:37.467810 [debug] [MainThread]: SQL status: OK in 0.012 seconds
+[0m08:59:37.467864 [debug] [MainThread]: On master: COMMIT
+[0m08:59:37.467864 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:59:37.467864 [debug] [MainThread]: On master: COMMIT
+[0m08:59:37.468862 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:59:37.468862 [debug] [MainThread]: On master: Close
+[0m08:59:37.471281 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:59:37.471281 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m08:59:37.471281 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m08:59:37.472278 [debug] [MainThread]: Connection 'model.GYB_test.my_second_dbt_model' was properly closed.
+[0m08:59:37.472278 [info ] [MainThread]: 
+[0m08:59:37.473352 [info ] [MainThread]: Finished running 2 view models, 1 table model in 0 hours 0 minutes and 2.01 seconds (2.01s).
+[0m08:59:37.474387 [debug] [MainThread]: Command end result
+[0m08:59:37.495406 [info ] [MainThread]: 
+[0m08:59:37.495406 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m08:59:37.496435 [info ] [MainThread]: 
+[0m08:59:37.496435 [error] [MainThread]:   Runtime Error in model fct_sales (models\fct_sales.sql)
+  Parser Error: syntax error at or near ";"
+[0m08:59:37.497666 [info ] [MainThread]: 
+[0m08:59:37.497666 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+[0m08:59:37.498664 [debug] [MainThread]: Command `dbt run` failed at 08:59:37.498664 after 3.59 seconds
+[0m08:59:37.498664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA11C18620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA11B87B60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA12836B70>]}
+[0m08:59:37.499692 [debug] [MainThread]: Flushing usage events
+[0m09:00:56.184433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1BB1BE00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1B9FB3B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1AAA4C80>]}
+
+
+============================== 09:00:56.192367 | 2258a251-7a36-48c6-aca6-ceb1e345062b ==============================
+[0m09:00:56.192367 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:00:56.193448 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m09:00:56.455424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2258a251-7a36-48c6-aca6-ceb1e345062b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1BD418B0>]}
+[0m09:00:56.507040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2258a251-7a36-48c6-aca6-ceb1e345062b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1AA1C980>]}
+[0m09:00:56.548031 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m09:00:56.563518 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m09:00:56.948183 [debug] [MainThread]: Partial parsing enabled: 2 files deleted, 0 files added, 1 files changed.
+[0m09:00:56.949249 [debug] [MainThread]: Partial parsing: deleted file: GYB_test://models\example\my_second_dbt_model.sql
+[0m09:00:56.949249 [debug] [MainThread]: Partial parsing: deleted file: GYB_test://models\example\my_first_dbt_model.sql
+[0m09:00:56.949249 [debug] [MainThread]: Partial parsing: updated file: GYB_test://models\fct_sales.sql
+[0m09:00:57.144018 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_second_dbt_model' in the 'models' section of file 'models\example\schema.yml'
+[0m09:00:57.146484 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_first_dbt_model' in the 'models' section of file 'models\example\schema.yml'
+[0m09:00:57.230262 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.GYB_test.unique_my_second_dbt_model_id.57a0f8c493' (models\example\schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m09:00:57.231193 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.GYB_test.not_null_my_second_dbt_model_id.151b76d778' (models\example\schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m09:00:57.231193 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.GYB_test.unique_my_first_dbt_model_id.16e066b321' (models\example\schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m09:00:57.232194 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.GYB_test.not_null_my_first_dbt_model_id.5fb22c2710' (models\example\schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m09:00:57.290833 [warn ] [MainThread]: [[33mWARNING[0m]: Found spaces in the name of `analysis.GYB_test.Agent
+Performance`
+[0m09:00:57.291868 [warn ] [MainThread]: [[33mWARNING[0m]: Spaces found in 4 resource name(s). This is deprecated, and
+may lead to errors when using dbt. For more information: https://docs.getdbt.com
+/reference/global-configs/legacy-behaviors#require_resource_names_without_spaces
+Run again with `--debug` to see them all.
+[0m09:00:57.291868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '2258a251-7a36-48c6-aca6-ceb1e345062b', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1AFA5640>]}
+[0m09:00:57.292866 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.GYB_test.example
+[0m09:00:57.297972 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2258a251-7a36-48c6-aca6-ceb1e345062b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1CCA85F0>]}
+[0m09:00:57.463903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2258a251-7a36-48c6-aca6-ceb1e345062b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1CCDFB30>]}
+[0m09:00:57.464917 [info ] [MainThread]: Found 3 analyses, 1 seed, 1 model, 410 macros
+[0m09:00:57.464917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2258a251-7a36-48c6-aca6-ceb1e345062b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1CC8B560>]}
+[0m09:00:57.467010 [info ] [MainThread]: 
+[0m09:00:57.467010 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m09:00:57.468127 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m09:00:58.442133 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m09:00:58.442191 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"dev"'
+    
+  
+  
+[0m09:00:58.442191 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:00:58.461046 [debug] [ThreadPool]: SQL status: OK in 0.019 seconds
+[0m09:00:58.463067 [debug] [ThreadPool]: On list_dev: Close
+[0m09:00:58.465082 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m09:00:58.465082 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m09:00:58.471090 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:00:58.471090 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='dev'
+        and type='sqlite'
+    
+  
+[0m09:00:58.471090 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:00:58.480335 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m09:00:58.482328 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:00:58.482328 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m09:00:58.482328 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:00:58.483359 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:00:58.483359 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m09:00:58.483359 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:00:58.484376 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m09:00:58.484376 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:00:58.485426 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m09:00:58.485426 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:00:58.485426 [debug] [ThreadPool]: On create_dev_main: Close
+[0m09:00:58.491411 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m09:00:58.496460 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:00:58.496460 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m09:00:58.496460 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:00:58.504600 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m09:00:58.505597 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:00:58.505597 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'dev'
+  
+[0m09:00:58.544120 [debug] [ThreadPool]: SQL status: OK in 0.038 seconds
+[0m09:00:58.550214 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m09:00:58.559323 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m09:00:58.559323 [debug] [ThreadPool]: On list_dev_main: Close
+[0m09:00:58.563831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2258a251-7a36-48c6-aca6-ceb1e345062b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1BD6EFC0>]}
+[0m09:00:58.563831 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:00:58.564930 [debug] [MainThread]: On master: BEGIN
+[0m09:00:58.564930 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:00:58.574356 [debug] [MainThread]: SQL status: OK in 0.009 seconds
+[0m09:00:58.574356 [debug] [MainThread]: On master: COMMIT
+[0m09:00:58.574356 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:00:58.575380 [debug] [MainThread]: On master: COMMIT
+[0m09:00:58.575380 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m09:00:58.575380 [debug] [MainThread]: On master: Close
+[0m09:00:58.578391 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:00:58.578391 [info ] [MainThread]: 
+[0m09:00:58.581397 [debug] [Thread-1 (]: Began running node model.GYB_test.fct_sales
+[0m09:00:58.581397 [info ] [Thread-1 (]: 1 of 1 START sql view model main.fct_sales ..................................... [RUN]
+[0m09:00:58.582428 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.GYB_test.fct_sales'
+[0m09:00:58.582428 [debug] [Thread-1 (]: Began compiling node model.GYB_test.fct_sales
+[0m09:00:58.590403 [debug] [Thread-1 (]: Writing injected SQL for node "model.GYB_test.fct_sales"
+[0m09:00:58.591414 [debug] [Thread-1 (]: Began executing node model.GYB_test.fct_sales
+[0m09:00:58.621030 [debug] [Thread-1 (]: Writing runtime sql for node "model.GYB_test.fct_sales"
+[0m09:00:58.622053 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:00:58.622053 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: BEGIN
+[0m09:00:58.622053 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m09:00:58.631235 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m09:00:58.631235 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:00:58.632321 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+
+  
+  create view "dev"."main"."fct_sales__dbt_tmp" as (
+    with base_data as (
+    select
+        coalesce("Reference ID", 'N/A') as reference_id,
+        coalesce("Product Name", 'N/A') as product_name,
+        coalesce("Country", 'N/A') as country,
+        coalesce("Campaign Name", 'N/A') as campaign_name,
+        coalesce("Source", 'N/A') as source,
+        coalesce("Total Rebill Amount", 0) + coalesce("Total Amount ($)", 0) - coalesce("Returned Amount ($)", 0) as total_revenue,
+        coalesce("Total Rebill Amount", 0) as rebill_revenue,
+        coalesce("Number Of Rebills", 0) as rebill_count,
+        coalesce("Discount Amount ($)", 0) as discount_amount,
+        coalesce("Returned Amount ($)", 0) as returned_amount,
+        coalesce("Return Date Kyiv", 'N/A') as return_date_kyiv,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as return_date_utc,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as return_date_new_york,
+        coalesce("Order Date Kyiv", 'N/A') as order_date_kyiv,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as order_date_utc,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as order_date_new_york,
+        coalesce(datediff(day, cast("Order Date Kyiv" as timestamp), cast("Return Date Kyiv" as timestamp)), 'N/A') as refund_days_difference
+    from "dev"."main"."Sample Data for GYB test - Query result"
+),
+
+sales_agents as (
+    select
+        coalesce(reference_id, 'N/A') as reference_id,
+        coalesce(string_agg(distinct "Sales Agent Name", ', '), 'N/A') as sales_agents
+    from "dev"."main"."Sample Data for GYB test - Query result"
+    group by reference_id
+)
+
+select
+    b.*,
+    a.sales_agents
+from base_data b
+left join sales_agents a
+on b.reference_id = a.reference_id
+  );
+
+[0m09:00:58.638052 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+
+  
+  create view "dev"."main"."fct_sales__dbt_tmp" as (
+    with base_data as (
+    select
+        coalesce("Reference ID", 'N/A') as reference_id,
+        coalesce("Product Name", 'N/A') as product_name,
+        coalesce("Country", 'N/A') as country,
+        coalesce("Campaign Name", 'N/A') as campaign_name,
+        coalesce("Source", 'N/A') as source,
+        coalesce("Total Rebill Amount", 0) + coalesce("Total Amount ($)", 0) - coalesce("Returned Amount ($)", 0) as total_revenue,
+        coalesce("Total Rebill Amount", 0) as rebill_revenue,
+        coalesce("Number Of Rebills", 0) as rebill_count,
+        coalesce("Discount Amount ($)", 0) as discount_amount,
+        coalesce("Returned Amount ($)", 0) as returned_amount,
+        coalesce("Return Date Kyiv", 'N/A') as return_date_kyiv,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as return_date_utc,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as return_date_new_york,
+        coalesce("Order Date Kyiv", 'N/A') as order_date_kyiv,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as order_date_utc,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as order_date_new_york,
+        coalesce(datediff(day, cast("Order Date Kyiv" as timestamp), cast("Return Date Kyiv" as timestamp)), 'N/A') as refund_days_difference
+    from "dev"."main"."Sample Data for GYB test - Query result"
+),
+
+sales_agents as (
+    select
+        coalesce(reference_id, 'N/A') as reference_id,
+        coalesce(string_agg(distinct "Sales Agent Name", ', '), 'N/A') as sales_agents
+    from "dev"."main"."Sample Data for GYB test - Query result"
+    group by reference_id
+)
+
+select
+    b.*,
+    a.sales_agents
+from base_data b
+left join sales_agents a
+on b.reference_id = a.reference_id
+  );
+
+[0m09:00:58.638052 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m09:00:58.638052 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: ROLLBACK
+[0m09:00:58.697733 [debug] [Thread-1 (]: Failed to rollback 'model.GYB_test.fct_sales'
+[0m09:00:58.697733 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: Close
+[0m09:00:58.702901 [debug] [Thread-1 (]: Runtime Error in model fct_sales (models\fct_sales.sql)
+  Binder Error: Referenced column "day" not found in FROM clause!
+  Candidate bindings: "Sample Data for GYB test - Query result.Country"
+  LINE 23:         coalesce(datediff(day, cast("Order Date Kyiv" as timestamp), cast("Return Date Kyiv" as timestamp)), 'N/A') as refund_days_difference
+      from "dev"."main"."Sample Data for GYB test - Query result"
+  ),
+  
+  sales_agents as (
+      select
+          coalesce(reference_id, 'N/A') as reference_id,
+          coalesce(string_agg(distinct "Sales Agent Name", ', '), 'N/A') as sales_agents
+      from "dev"."main"."Sample Data for GYB test - Query result"
+      group by reference_id
+  )
+  
+  select
+      b.*,
+      a.sales_agents
+  from base_data b
+  left join sales_agents a
+  on b.reference_id = a.reference_id
+    );
+  ...
+                                     ^
+[0m09:00:58.703899 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2258a251-7a36-48c6-aca6-ceb1e345062b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1AFA66F0>]}
+[0m09:00:58.703899 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model main.fct_sales ............................ [[31mERROR[0m in 0.12s]
+[0m09:00:58.704938 [debug] [Thread-1 (]: Finished running node model.GYB_test.fct_sales
+[0m09:00:58.706048 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:00:58.707126 [debug] [MainThread]: On master: BEGIN
+[0m09:00:58.707126 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:00:58.716289 [debug] [MainThread]: SQL status: OK in 0.009 seconds
+[0m09:00:58.716289 [debug] [MainThread]: On master: COMMIT
+[0m09:00:58.716289 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:00:58.717287 [debug] [MainThread]: On master: COMMIT
+[0m09:00:58.717287 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m09:00:58.717287 [debug] [MainThread]: On master: Close
+[0m09:00:58.720279 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:00:58.720279 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m09:00:58.720279 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m09:00:58.721276 [debug] [MainThread]: Connection 'model.GYB_test.fct_sales' was properly closed.
+[0m09:00:58.721276 [info ] [MainThread]: 
+[0m09:00:58.721276 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.25 seconds (1.25s).
+[0m09:00:58.722281 [debug] [MainThread]: Command end result
+[0m09:00:58.751607 [info ] [MainThread]: 
+[0m09:00:58.752604 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m09:00:58.753606 [info ] [MainThread]: 
+[0m09:00:58.753606 [error] [MainThread]:   Runtime Error in model fct_sales (models\fct_sales.sql)
+  Binder Error: Referenced column "day" not found in FROM clause!
+  Candidate bindings: "Sample Data for GYB test - Query result.Country"
+  LINE 23:         coalesce(datediff(day, cast("Order Date Kyiv" as timestamp), cast("Return Date Kyiv" as timestamp)), 'N/A') as refund_days_difference
+      from "dev"."main"."Sample Data for GYB test - Query result"
+  ),
+  
+  sales_agents as (
+      select
+          coalesce(reference_id, 'N/A') as reference_id,
+          coalesce(string_agg(distinct "Sales Agent Name", ', '), 'N/A') as sales_agents
+      from "dev"."main"."Sample Data for GYB test - Query result"
+      group by reference_id
+  )
+  
+  select
+      b.*,
+      a.sales_agents
+  from base_data b
+  left join sales_agents a
+  on b.reference_id = a.reference_id
+    );
+  ...
+                                     ^
+[0m09:00:58.754600 [info ] [MainThread]: 
+[0m09:00:58.755597 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m09:00:58.756594 [debug] [MainThread]: Command `dbt run` failed at 09:00:58.756594 after 2.66 seconds
+[0m09:00:58.756594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1B26C2F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1BB4A0F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010D1BB48B00>]}
+[0m09:00:58.757591 [debug] [MainThread]: Flushing usage events
+[0m09:09:58.684480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C4377A79B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C4397BC8F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C4397BF830>]}
+
+
+============================== 09:09:58.700102 | 083276c5-c9be-4e15-9964-616670692f69 ==============================
+[0m09:09:58.700102 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:09:58.700102 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:09:58.950080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '083276c5-c9be-4e15-9964-616670692f69', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C43B499BE0>]}
+[0m09:09:58.996912 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '083276c5-c9be-4e15-9964-616670692f69', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C43AE1F1A0>]}
+[0m09:09:59.012577 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m09:09:59.028155 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m09:09:59.496803 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m09:09:59.512426 [debug] [MainThread]: Partial parsing: updated file: GYB_test://models\fct_sales.sql
+[0m09:09:59.699918 [warn ] [MainThread]: [[33mWARNING[0m]: Found spaces in the name of `analysis.GYB_test.Agent
+Performance`
+[0m09:09:59.699918 [warn ] [MainThread]: [[33mWARNING[0m]: Spaces found in 4 resource name(s). This is deprecated, and
+may lead to errors when using dbt. For more information: https://docs.getdbt.com
+/reference/global-configs/legacy-behaviors#require_resource_names_without_spaces
+Run again with `--debug` to see them all.
+[0m09:09:59.699918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '083276c5-c9be-4e15-9964-616670692f69', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C43A665B80>]}
+[0m09:09:59.715539 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '083276c5-c9be-4e15-9964-616670692f69', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C43978F5C0>]}
+[0m09:09:59.887612 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '083276c5-c9be-4e15-9964-616670692f69', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C43BC36FF0>]}
+[0m09:09:59.887612 [info ] [MainThread]: Found 3 analyses, 1 seed, 1 model, 410 macros
+[0m09:09:59.887612 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '083276c5-c9be-4e15-9964-616670692f69', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C43B5497C0>]}
+[0m09:09:59.887612 [info ] [MainThread]: 
+[0m09:09:59.887612 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m09:09:59.887612 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m09:10:00.606698 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m09:10:00.606698 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"dev"'
+    
+  
+  
+[0m09:10:00.606698 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:10:00.622321 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m09:10:00.622321 [debug] [ThreadPool]: On list_dev: Close
+[0m09:10:00.622321 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m09:10:00.622321 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m09:10:00.637941 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:10:00.637941 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='dev'
+        and type='sqlite'
+    
+  
+[0m09:10:00.637941 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:10:00.637941 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m09:10:00.637941 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:10:00.637941 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m09:10:00.637941 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:10:00.637941 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:10:00.637941 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m09:10:00.637941 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:10:00.637941 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m09:10:00.653563 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:10:00.653563 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m09:10:00.653563 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:10:00.653563 [debug] [ThreadPool]: On create_dev_main: Close
+[0m09:10:00.653563 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m09:10:00.653563 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:10:00.653563 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m09:10:00.653563 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:10:00.669219 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m09:10:00.669219 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:10:00.669219 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'dev'
+  
+[0m09:10:00.700462 [debug] [ThreadPool]: SQL status: OK in 0.036 seconds
+[0m09:10:00.716049 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m09:10:00.716049 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m09:10:00.716049 [debug] [ThreadPool]: On list_dev_main: Close
+[0m09:10:00.716049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '083276c5-c9be-4e15-9964-616670692f69', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C43BD91A60>]}
+[0m09:10:00.716049 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:10:00.716049 [debug] [MainThread]: On master: BEGIN
+[0m09:10:00.716049 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:10:00.731671 [debug] [MainThread]: SQL status: OK in 0.009 seconds
+[0m09:10:00.731671 [debug] [MainThread]: On master: COMMIT
+[0m09:10:00.731671 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:10:00.731671 [debug] [MainThread]: On master: COMMIT
+[0m09:10:00.731671 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m09:10:00.731671 [debug] [MainThread]: On master: Close
+[0m09:10:00.731671 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:10:00.731671 [info ] [MainThread]: 
+[0m09:10:00.731671 [debug] [Thread-1 (]: Began running node model.GYB_test.fct_sales
+[0m09:10:00.731671 [info ] [Thread-1 (]: 1 of 1 START sql view model main.fct_sales ..................................... [RUN]
+[0m09:10:00.731671 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.GYB_test.fct_sales'
+[0m09:10:00.731671 [debug] [Thread-1 (]: Began compiling node model.GYB_test.fct_sales
+[0m09:10:00.747295 [debug] [Thread-1 (]: Writing injected SQL for node "model.GYB_test.fct_sales"
+[0m09:10:00.747295 [debug] [Thread-1 (]: Began executing node model.GYB_test.fct_sales
+[0m09:10:00.778567 [debug] [Thread-1 (]: Writing runtime sql for node "model.GYB_test.fct_sales"
+[0m09:10:00.778567 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:10:00.778567 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: BEGIN
+[0m09:10:00.778567 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m09:10:00.778567 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m09:10:00.778567 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:10:00.778567 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+
+  
+  create view "dev"."main"."fct_sales__dbt_tmp" as (
+    with base_data as (
+    select
+        coalesce("Reference ID", 'N/A') as reference_id,
+        coalesce("Product Name", 'N/A') as product_name,
+        coalesce("Country", 'N/A') as country,
+        coalesce("Campaign Name", 'N/A') as campaign_name,
+        coalesce("Source", 'N/A') as source,
+        coalesce("Total Rebill Amount", 0) + coalesce("Total Amount ($)", 0) - coalesce("Returned Amount ($)", 0) as total_revenue,
+        coalesce("Total Rebill Amount", 0) as rebill_revenue,
+        coalesce("Number Of Rebills", 0) as rebill_count,
+        coalesce("Discount Amount ($)", 0) as discount_amount,
+        coalesce("Returned Amount ($)", 0) as returned_amount,
+        coalesce("Return Date Kyiv", 'N/A') as return_date_kyiv,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as return_date_utc,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as return_date_new_york,
+        coalesce("Order Date Kyiv", 'N/A') as order_date_kyiv,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as order_date_utc,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as order_date_new_york
+    from "dev"."main"."Sample Data for GYB test - Query result"
+),
+
+sales_agents as (
+    select
+        coalesce(reference_id, 'N/A') as reference_id,
+        coalesce(string_agg(distinct "Sales Agent Name", ', '), 'N/A') as sales_agents
+    from "dev"."main"."Sample Data for GYB test - Query result"
+    group by reference_id
+)
+
+select
+    b.*,
+    a.sales_agents
+from base_data b
+left join sales_agents a
+on b.reference_id = a.reference_id
+  );
+
+[0m09:10:00.794357 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m09:10:00.794357 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:10:00.794357 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+alter view "dev"."main"."fct_sales__dbt_tmp" rename to "fct_sales"
+[0m09:10:00.794357 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m09:10:00.809811 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: COMMIT
+[0m09:10:00.809811 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:10:00.809811 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: COMMIT
+[0m09:10:00.809811 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m09:10:00.825433 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:10:00.825433 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+drop view if exists "dev"."main"."fct_sales__dbt_backup" cascade
+[0m09:10:00.825433 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m09:10:00.825433 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: Close
+[0m09:10:00.825433 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '083276c5-c9be-4e15-9964-616670692f69', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C437B05130>]}
+[0m09:10:00.841057 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.fct_sales ................................ [[32mOK[0m in 0.09s]
+[0m09:10:00.841057 [debug] [Thread-1 (]: Finished running node model.GYB_test.fct_sales
+[0m09:10:00.841057 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:10:00.841057 [debug] [MainThread]: On master: BEGIN
+[0m09:10:00.841057 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:10:00.841057 [debug] [MainThread]: SQL status: OK in 0.012 seconds
+[0m09:10:00.841057 [debug] [MainThread]: On master: COMMIT
+[0m09:10:00.856645 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:10:00.856645 [debug] [MainThread]: On master: COMMIT
+[0m09:10:00.856645 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m09:10:00.856645 [debug] [MainThread]: On master: Close
+[0m09:10:00.856645 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:10:00.856645 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m09:10:00.856645 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m09:10:00.856645 [debug] [MainThread]: Connection 'model.GYB_test.fct_sales' was properly closed.
+[0m09:10:00.856645 [info ] [MainThread]: 
+[0m09:10:00.856645 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.97 seconds (0.97s).
+[0m09:10:00.856645 [debug] [MainThread]: Command end result
+[0m09:10:00.872301 [info ] [MainThread]: 
+[0m09:10:00.872301 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:10:00.872301 [info ] [MainThread]: 
+[0m09:10:00.872301 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m09:10:00.872301 [debug] [MainThread]: Command `dbt run` succeeded at 09:10:00.872301 after 2.28 seconds
+[0m09:10:00.872301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C43B16B320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C43B16A5A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C43ACD6360>]}
+[0m09:10:00.872301 [debug] [MainThread]: Flushing usage events
+[0m09:10:58.222661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000151ED597A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000151EF7E5B20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000151EFF867E0>]}
+
+
+============================== 09:10:58.225694 | a4d1459b-16ce-4dac-9f03-bb31078bd18c ==============================
+[0m09:10:58.225694 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:10:58.226726 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt test', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:10:58.418122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a4d1459b-16ce-4dac-9f03-bb31078bd18c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000151F149AFC0>]}
+[0m09:10:58.466327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a4d1459b-16ce-4dac-9f03-bb31078bd18c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000151ECE407A0>]}
+[0m09:10:58.468373 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m09:10:58.476606 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m09:10:58.619551 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:10:58.619551 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:10:58.619551 [warn ] [MainThread]: [[33mWARNING[0m]: Found spaces in the name of `analysis.GYB_test.Agent
+Performance`
+[0m09:10:58.620623 [warn ] [MainThread]: [[33mWARNING[0m]: Spaces found in 4 resource name(s). This is deprecated, and
+may lead to errors when using dbt. For more information: https://docs.getdbt.com
+/reference/global-configs/legacy-behaviors#require_resource_names_without_spaces
+Run again with `--debug` to see them all.
+[0m09:10:58.620623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'a4d1459b-16ce-4dac-9f03-bb31078bd18c', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000151F1C36210>]}
+[0m09:10:58.660412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a4d1459b-16ce-4dac-9f03-bb31078bd18c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000151F1549970>]}
+[0m09:10:58.796086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a4d1459b-16ce-4dac-9f03-bb31078bd18c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000151F1F82090>]}
+[0m09:10:58.797150 [info ] [MainThread]: Found 3 analyses, 1 seed, 1 model, 410 macros
+[0m09:10:58.797150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a4d1459b-16ce-4dac-9f03-bb31078bd18c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000151F1428230>]}
+[0m09:10:58.799208 [info ] [MainThread]: 
+[0m09:10:58.799208 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m09:10:58.801264 [debug] [MainThread]: Command end result
+[0m09:10:58.821761 [debug] [MainThread]: Command `dbt test` succeeded at 09:10:58.821761 after 0.67 seconds
+[0m09:10:58.822814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000151F0CD89E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000151F0E3FEF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000151F116DDF0>]}
+[0m09:10:58.822814 [debug] [MainThread]: Flushing usage events
+[0m09:13:06.411609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000263220CB7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002631DF40E60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026321DD9A90>]}
+
+
+============================== 09:13:06.414672 | 57071acd-9bdd-40ee-b86f-a78c0295bcf6 ==============================
+[0m09:13:06.414672 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:13:06.415669 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt seed', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:13:06.607280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '57071acd-9bdd-40ee-b86f-a78c0295bcf6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026322343050>]}
+[0m09:13:06.654695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '57071acd-9bdd-40ee-b86f-a78c0295bcf6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000263207BB6E0>]}
+[0m09:13:06.657740 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m09:13:06.665060 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m09:13:06.796769 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:13:06.796769 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:13:06.797809 [warn ] [MainThread]: [[33mWARNING[0m]: Found spaces in the name of `analysis.GYB_test.Agent
+Performance`
+[0m09:13:06.797809 [warn ] [MainThread]: [[33mWARNING[0m]: Spaces found in 4 resource name(s). This is deprecated, and
+may lead to errors when using dbt. For more information: https://docs.getdbt.com
+/reference/global-configs/legacy-behaviors#require_resource_names_without_spaces
+Run again with `--debug` to see them all.
+[0m09:13:06.798850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '57071acd-9bdd-40ee-b86f-a78c0295bcf6', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026322AD4950>]}
+[0m09:13:06.837403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '57071acd-9bdd-40ee-b86f-a78c0295bcf6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026322A23B30>]}
+[0m09:13:06.942732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '57071acd-9bdd-40ee-b86f-a78c0295bcf6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026322AD6540>]}
+[0m09:13:06.942732 [info ] [MainThread]: Found 3 analyses, 1 seed, 1 model, 410 macros
+[0m09:13:06.943862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '57071acd-9bdd-40ee-b86f-a78c0295bcf6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026322A49B20>]}
+[0m09:13:06.944875 [info ] [MainThread]: 
+[0m09:13:06.945872 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m09:13:06.946939 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m09:13:07.010779 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m09:13:07.010779 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"dev"'
+    
+  
+  
+[0m09:13:07.011851 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:13:07.021543 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m09:13:07.022598 [debug] [ThreadPool]: On list_dev: Close
+[0m09:13:07.025250 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m09:13:07.026245 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m09:13:07.030711 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:13:07.031789 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='dev'
+        and type='sqlite'
+    
+  
+[0m09:13:07.031789 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:13:07.040444 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m09:13:07.041453 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:13:07.041453 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m09:13:07.042468 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:13:07.042468 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:13:07.042468 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m09:13:07.042468 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:13:07.043484 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m09:13:07.043484 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:13:07.044482 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m09:13:07.044482 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:13:07.044482 [debug] [ThreadPool]: On create_dev_main: Close
+[0m09:13:07.050599 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m09:13:07.055704 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:13:07.055704 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m09:13:07.055704 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:13:07.063855 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m09:13:07.064909 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:13:07.064909 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'dev'
+  
+[0m09:13:07.101860 [debug] [ThreadPool]: SQL status: OK in 0.036 seconds
+[0m09:13:07.106988 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m09:13:07.107997 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m09:13:07.109043 [debug] [ThreadPool]: On list_dev_main: Close
+[0m09:13:07.113264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '57071acd-9bdd-40ee-b86f-a78c0295bcf6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026322A200E0>]}
+[0m09:13:07.113264 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:13:07.113264 [debug] [MainThread]: On master: BEGIN
+[0m09:13:07.113264 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:13:07.121796 [debug] [MainThread]: SQL status: OK in 0.008 seconds
+[0m09:13:07.121796 [debug] [MainThread]: On master: COMMIT
+[0m09:13:07.122794 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:13:07.122794 [debug] [MainThread]: On master: COMMIT
+[0m09:13:07.122794 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m09:13:07.122794 [debug] [MainThread]: On master: Close
+[0m09:13:07.126120 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:13:07.126120 [info ] [MainThread]: 
+[0m09:13:07.129367 [debug] [Thread-1 (]: Began running node seed.GYB_test.Sample Data for GYB test - Query result
+[0m09:13:07.129367 [info ] [Thread-1 (]: 1 of 1 START seed file main.Sample Data for GYB test - Query result ............ [RUN]
+[0m09:13:07.130366 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.GYB_test.Sample Data for GYB test - Query result'
+[0m09:13:07.130366 [debug] [Thread-1 (]: Began compiling node seed.GYB_test.Sample Data for GYB test - Query result
+[0m09:13:07.131363 [debug] [Thread-1 (]: Began executing node seed.GYB_test.Sample Data for GYB test - Query result
+[0m09:13:07.183235 [debug] [Thread-1 (]: Using duckdb connection "seed.GYB_test.Sample Data for GYB test - Query result"
+[0m09:13:07.183235 [debug] [Thread-1 (]: On seed.GYB_test.Sample Data for GYB test - Query result: BEGIN
+[0m09:13:07.184233 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m09:13:07.192639 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m09:13:07.192639 [debug] [Thread-1 (]: Using duckdb connection "seed.GYB_test.Sample Data for GYB test - Query result"
+[0m09:13:07.192639 [debug] [Thread-1 (]: On seed.GYB_test.Sample Data for GYB test - Query result: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "seed.GYB_test.Sample Data for GYB test - Query result"} */
+truncate table "dev"."main"."Sample Data for GYB test - Query result"
+[0m09:13:07.193637 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m09:13:07.202876 [debug] [Thread-1 (]: Using duckdb connection "seed.GYB_test.Sample Data for GYB test - Query result"
+[0m09:13:07.203874 [debug] [Thread-1 (]: On seed.GYB_test.Sample Data for GYB test - Query result: 
+          COPY "dev"."main"."Sample Data for GYB test - Query result" FROM 'C:\Users\Yara\Desktop\test_dbt\GYB_test\seeds\Sample Data for GYB test - Query result.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m09:13:07.210685 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m09:13:07.215897 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.GYB_test.Sample Data for GYB test - Query result"
+[0m09:13:07.228220 [debug] [Thread-1 (]: On seed.GYB_test.Sample Data for GYB test - Query result: COMMIT
+[0m09:13:07.229278 [debug] [Thread-1 (]: Using duckdb connection "seed.GYB_test.Sample Data for GYB test - Query result"
+[0m09:13:07.229278 [debug] [Thread-1 (]: On seed.GYB_test.Sample Data for GYB test - Query result: COMMIT
+[0m09:13:07.236732 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m09:13:07.237844 [debug] [Thread-1 (]: On seed.GYB_test.Sample Data for GYB test - Query result: Close
+[0m09:13:07.266749 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '57071acd-9bdd-40ee-b86f-a78c0295bcf6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026322A49790>]}
+[0m09:13:07.266749 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file main.Sample Data for GYB test - Query result ........ [[32mINSERT 499[0m in 0.14s]
+[0m09:13:07.267804 [debug] [Thread-1 (]: Finished running node seed.GYB_test.Sample Data for GYB test - Query result
+[0m09:13:07.268824 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:13:07.269822 [debug] [MainThread]: On master: BEGIN
+[0m09:13:07.269822 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:13:07.281066 [debug] [MainThread]: SQL status: OK in 0.012 seconds
+[0m09:13:07.282064 [debug] [MainThread]: On master: COMMIT
+[0m09:13:07.282064 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:13:07.282064 [debug] [MainThread]: On master: COMMIT
+[0m09:13:07.283113 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m09:13:07.283113 [debug] [MainThread]: On master: Close
+[0m09:13:07.285315 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:13:07.286278 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m09:13:07.286278 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m09:13:07.286278 [debug] [MainThread]: Connection 'seed.GYB_test.Sample Data for GYB test - Query result' was properly closed.
+[0m09:13:07.286278 [info ] [MainThread]: 
+[0m09:13:07.287332 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 0.34 seconds (0.34s).
+[0m09:13:07.287332 [debug] [MainThread]: Command end result
+[0m09:13:07.309712 [info ] [MainThread]: 
+[0m09:13:07.309712 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:13:07.310725 [info ] [MainThread]: 
+[0m09:13:07.310725 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m09:13:07.311722 [debug] [MainThread]: Command `dbt seed` succeeded at 09:13:07.311722 after 0.97 seconds
+[0m09:13:07.311722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000263215A3740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000263215A39B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000263207BB770>]}
+[0m09:13:07.311722 [debug] [MainThread]: Flushing usage events
+[0m09:13:17.943815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019999CE9910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001999C693B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001999D788FE0>]}
+
+
+============================== 09:13:17.946828 | cbe1c292-e6b8-48c6-bea6-292d0edc6a18 ==============================
+[0m09:13:17.946828 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:13:17.946828 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:13:18.140661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cbe1c292-e6b8-48c6-bea6-292d0edc6a18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001999D9BA4B0>]}
+[0m09:13:18.188920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cbe1c292-e6b8-48c6-bea6-292d0edc6a18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001999D9B8E60>]}
+[0m09:13:18.191973 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m09:13:18.199217 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m09:13:18.329486 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:13:18.330533 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:13:18.330533 [warn ] [MainThread]: [[33mWARNING[0m]: Found spaces in the name of `analysis.GYB_test.Agent
+Performance`
+[0m09:13:18.331578 [warn ] [MainThread]: [[33mWARNING[0m]: Spaces found in 4 resource name(s). This is deprecated, and
+may lead to errors when using dbt. For more information: https://docs.getdbt.com
+/reference/global-configs/legacy-behaviors#require_resource_names_without_spaces
+Run again with `--debug` to see them all.
+[0m09:13:18.331578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'cbe1c292-e6b8-48c6-bea6-292d0edc6a18', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001999E4C3FE0>]}
+[0m09:13:18.371772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cbe1c292-e6b8-48c6-bea6-292d0edc6a18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001999DC2DC40>]}
+[0m09:13:18.469952 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cbe1c292-e6b8-48c6-bea6-292d0edc6a18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001999DD9DC40>]}
+[0m09:13:18.469952 [info ] [MainThread]: Found 3 analyses, 1 seed, 1 model, 410 macros
+[0m09:13:18.470990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cbe1c292-e6b8-48c6-bea6-292d0edc6a18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001999D612B70>]}
+[0m09:13:18.472053 [info ] [MainThread]: 
+[0m09:13:18.473051 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m09:13:18.474100 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m09:13:18.540108 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m09:13:18.541158 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"dev"'
+    
+  
+  
+[0m09:13:18.541158 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:13:18.551327 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m09:13:18.553427 [debug] [ThreadPool]: On list_dev: Close
+[0m09:13:18.555444 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m09:13:18.556442 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m09:13:18.561517 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:13:18.561517 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='dev'
+        and type='sqlite'
+    
+  
+[0m09:13:18.562515 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:13:18.570726 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m09:13:18.571724 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:13:18.571724 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m09:13:18.572742 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:13:18.572742 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:13:18.572742 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m09:13:18.573759 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:13:18.573759 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m09:13:18.574775 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:13:18.574775 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m09:13:18.574775 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:13:18.575773 [debug] [ThreadPool]: On create_dev_main: Close
+[0m09:13:18.581776 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m09:13:18.586075 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:13:18.586075 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m09:13:18.586075 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:13:18.594624 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m09:13:18.594624 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:13:18.594624 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'dev'
+  
+[0m09:13:18.632482 [debug] [ThreadPool]: SQL status: OK in 0.037 seconds
+[0m09:13:18.638660 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m09:13:18.640656 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m09:13:18.640656 [debug] [ThreadPool]: On list_dev_main: Close
+[0m09:13:18.644498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cbe1c292-e6b8-48c6-bea6-292d0edc6a18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001999E92A810>]}
+[0m09:13:18.645498 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:13:18.645498 [debug] [MainThread]: On master: BEGIN
+[0m09:13:18.645498 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:13:18.654027 [debug] [MainThread]: SQL status: OK in 0.008 seconds
+[0m09:13:18.654027 [debug] [MainThread]: On master: COMMIT
+[0m09:13:18.654027 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:13:18.655069 [debug] [MainThread]: On master: COMMIT
+[0m09:13:18.655069 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m09:13:18.655069 [debug] [MainThread]: On master: Close
+[0m09:13:18.658243 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:13:18.658243 [info ] [MainThread]: 
+[0m09:13:18.661067 [debug] [Thread-1 (]: Began running node model.GYB_test.fct_sales
+[0m09:13:18.661067 [info ] [Thread-1 (]: 1 of 1 START sql view model main.fct_sales ..................................... [RUN]
+[0m09:13:18.662101 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.GYB_test.fct_sales'
+[0m09:13:18.662101 [debug] [Thread-1 (]: Began compiling node model.GYB_test.fct_sales
+[0m09:13:18.670743 [debug] [Thread-1 (]: Writing injected SQL for node "model.GYB_test.fct_sales"
+[0m09:13:18.671875 [debug] [Thread-1 (]: Began executing node model.GYB_test.fct_sales
+[0m09:13:18.698898 [debug] [Thread-1 (]: Writing runtime sql for node "model.GYB_test.fct_sales"
+[0m09:13:18.700017 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:13:18.700017 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: BEGIN
+[0m09:13:18.700017 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m09:13:18.708647 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m09:13:18.708647 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:13:18.708647 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+
+  
+  create view "dev"."main"."fct_sales__dbt_tmp" as (
+    with base_data as (
+    select
+        coalesce("Reference ID", 'N/A') as reference_id,
+        coalesce("Product Name", 'N/A') as product_name,
+        coalesce("Country", 'N/A') as country,
+        coalesce("Campaign Name", 'N/A') as campaign_name,
+        coalesce("Source", 'N/A') as source,
+        coalesce("Total Rebill Amount", 0) + coalesce("Total Amount ($)", 0) - coalesce("Returned Amount ($)", 0) as total_revenue,
+        coalesce("Total Rebill Amount", 0) as rebill_revenue,
+        coalesce("Number Of Rebills", 0) as rebill_count,
+        coalesce("Discount Amount ($)", 0) as discount_amount,
+        coalesce("Returned Amount ($)", 0) as returned_amount,
+        coalesce("Return Date Kyiv", 'N/A') as return_date_kyiv,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as return_date_utc,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as return_date_new_york,
+        coalesce("Order Date Kyiv", 'N/A') as order_date_kyiv,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as order_date_utc,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as order_date_new_york
+    from "dev"."main"."Sample Data for GYB test - Query result"
+),
+
+sales_agents as (
+    select
+        coalesce(reference_id, 'N/A') as reference_id,
+        coalesce(string_agg(distinct "Sales Agent Name", ', '), 'N/A') as sales_agents
+    from "dev"."main"."Sample Data for GYB test - Query result"
+    group by reference_id
+)
+
+select
+    b.*,
+    a.sales_agents
+from base_data b
+left join sales_agents a
+on b.reference_id = a.reference_id
+  );
+
+[0m09:13:18.710782 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m09:13:18.715960 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:13:18.716957 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+alter view "dev"."main"."fct_sales" rename to "fct_sales__dbt_backup"
+[0m09:13:18.716957 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m09:13:18.719138 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:13:18.720130 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+alter view "dev"."main"."fct_sales__dbt_tmp" rename to "fct_sales"
+[0m09:13:18.720204 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m09:13:18.734269 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: COMMIT
+[0m09:13:18.734269 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:13:18.734269 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: COMMIT
+[0m09:13:18.738440 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m09:13:18.742544 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:13:18.742544 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+drop view if exists "dev"."main"."fct_sales__dbt_backup" cascade
+[0m09:13:18.744790 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m09:13:18.745840 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: Close
+[0m09:13:18.755161 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cbe1c292-e6b8-48c6-bea6-292d0edc6a18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001999A3E1460>]}
+[0m09:13:18.755161 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.fct_sales ................................ [[32mOK[0m in 0.09s]
+[0m09:13:18.756158 [debug] [Thread-1 (]: Finished running node model.GYB_test.fct_sales
+[0m09:13:18.757227 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:13:18.758225 [debug] [MainThread]: On master: BEGIN
+[0m09:13:18.758225 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:13:18.769633 [debug] [MainThread]: SQL status: OK in 0.012 seconds
+[0m09:13:18.769633 [debug] [MainThread]: On master: COMMIT
+[0m09:13:18.770630 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:13:18.770630 [debug] [MainThread]: On master: COMMIT
+[0m09:13:18.770630 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m09:13:18.771652 [debug] [MainThread]: On master: Close
+[0m09:13:18.773703 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:13:18.773703 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m09:13:18.773703 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m09:13:18.774700 [debug] [MainThread]: Connection 'model.GYB_test.fct_sales' was properly closed.
+[0m09:13:18.774700 [info ] [MainThread]: 
+[0m09:13:18.775426 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.30 seconds (0.30s).
+[0m09:13:18.775426 [debug] [MainThread]: Command end result
+[0m09:13:18.798086 [info ] [MainThread]: 
+[0m09:13:18.798086 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:13:18.799103 [info ] [MainThread]: 
+[0m09:13:18.800157 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m09:13:18.801171 [debug] [MainThread]: Command `dbt run` succeeded at 09:13:18.801171 after 0.93 seconds
+[0m09:13:18.801171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019999CE9910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001999CC3D190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001999AF8D070>]}
+[0m09:13:18.802254 [debug] [MainThread]: Flushing usage events
+[0m09:16:40.901543 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C3B97890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C673CD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C673F920>]}
+
+
+============================== 09:16:40.901543 | aad41201-7a90-4e27-bcbe-73a5bffd67ca ==============================
+[0m09:16:40.901543 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:16:40.901543 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt test', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:16:41.089028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'aad41201-7a90-4e27-bcbe-73a5bffd67ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C6FAFD70>]}
+[0m09:16:41.135894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'aad41201-7a90-4e27-bcbe-73a5bffd67ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C756FEC0>]}
+[0m09:16:41.135894 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m09:16:41.151489 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m09:16:41.276489 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:16:41.276489 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:16:41.276489 [warn ] [MainThread]: [[33mWARNING[0m]: Found spaces in the name of `analysis.GYB_test.Agent
+Performance`
+[0m09:16:41.276489 [warn ] [MainThread]: [[33mWARNING[0m]: Spaces found in 4 resource name(s). This is deprecated, and
+may lead to errors when using dbt. For more information: https://docs.getdbt.com
+/reference/global-configs/legacy-behaviors#require_resource_names_without_spaces
+Run again with `--debug` to see them all.
+[0m09:16:41.276489 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'aad41201-7a90-4e27-bcbe-73a5bffd67ca', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C7396030>]}
+[0m09:16:41.323360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'aad41201-7a90-4e27-bcbe-73a5bffd67ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C7CA6150>]}
+[0m09:16:41.432678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'aad41201-7a90-4e27-bcbe-73a5bffd67ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C8281DF0>]}
+[0m09:16:41.432678 [info ] [MainThread]: Found 3 analyses, 1 seed, 1 model, 410 macros
+[0m09:16:41.432678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'aad41201-7a90-4e27-bcbe-73a5bffd67ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C825ED80>]}
+[0m09:16:41.432678 [info ] [MainThread]: 
+[0m09:16:41.432678 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m09:16:41.432678 [debug] [MainThread]: Command end result
+[0m09:16:41.448334 [debug] [MainThread]: Command `dbt test` succeeded at 09:16:41.448334 after 0.67 seconds
+[0m09:16:41.448334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C3B97890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C7043CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C7040890>]}
+[0m09:16:41.448334 [debug] [MainThread]: Flushing usage events
+[0m09:28:12.854717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BCCD5B8AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BCCC6D5F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BCCC590E60>]}
+
+
+============================== 09:28:12.854717 | 52dd6a9c-d124-4f93-9f3f-f92cde824ddc ==============================
+[0m09:28:12.854717 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:28:12.854717 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt seed', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:28:12.854717 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m09:28:12.854717 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "GYB_test", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+[0m09:28:12.854717 [debug] [MainThread]: Command `dbt seed` failed at 09:28:12.854717 after 0.13 seconds
+[0m09:28:12.869769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BCCD5B8AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BCD0097A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BCD00DF5F0>]}
+[0m09:28:12.869769 [debug] [MainThread]: Flushing usage events
+[0m09:30:19.259651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2F4E73800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2F75A5100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2F75A7680>]}
+
+
+============================== 09:30:19.275271 | fb8e5952-1891-4962-8672-37ef41bd2fee ==============================
+[0m09:30:19.275271 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:30:19.275271 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt seed', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:30:19.275271 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m09:30:19.275271 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "GYB_test", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+[0m09:30:19.283407 [debug] [MainThread]: Command `dbt seed` failed at 09:30:19.283407 after 0.12 seconds
+[0m09:30:19.283407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2F79D7C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2F79D7380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2F7196DE0>]}
+[0m09:30:19.284236 [debug] [MainThread]: Flushing usage events
+[0m09:31:20.796756 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018717259520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018717258200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001871725A540>]}
+
+
+============================== 09:31:20.799850 | e7e4dd8a-5858-45a2-9387-ccd14f1d8bbc ==============================
+[0m09:31:20.799850 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:31:20.800848 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt seed', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:31:20.804841 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m09:31:20.805307 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "GYB_test", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+[0m09:31:20.806662 [debug] [MainThread]: Command `dbt seed` failed at 09:31:20.805731 after 0.11 seconds
+[0m09:31:20.806721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000187176674A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018717667770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000187176ABFB0>]}
+[0m09:31:20.806721 [debug] [MainThread]: Flushing usage events
+[0m09:32:01.636372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A8834560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A88BDFD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A88BD7F0>]}
+
+
+============================== 09:32:01.636372 | 86aa4e54-2372-45fb-a5b9-76918d61c79d ==============================
+[0m09:32:01.636372 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:32:01.636372 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt seed', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:32:01.636372 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m09:32:01.636372 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "GYB_test", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+[0m09:32:01.647786 [debug] [MainThread]: Command `dbt seed` failed at 09:32:01.647786 after 0.09 seconds
+[0m09:32:01.647786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A87386B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A7D7FD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A80FC920>]}
+[0m09:32:01.648635 [debug] [MainThread]: Flushing usage events
+[0m09:35:14.577338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281E5297950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281E7EA4BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281E7EA7290>]}
+
+
+============================== 09:35:14.580385 | 0eeefbb6-b5fc-4c40-bd3a-968143adea82 ==============================
+[0m09:35:14.580385 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:35:14.580385 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m09:35:14.602989 [info ] [MainThread]: dbt version: 1.8.6
+[0m09:35:14.604006 [info ] [MainThread]: python version: 3.12.5
+[0m09:35:14.604006 [info ] [MainThread]: python path: C:\Users\Yara\dbt-venv\Scripts\python.exe
+[0m09:35:14.605003 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m09:35:14.706603 [info ] [MainThread]: Using profiles dir at C:\Users\Yara\.dbt
+[0m09:35:14.707682 [info ] [MainThread]: Using profiles.yml file at C:\Users\Yara\.dbt\profiles.yml
+[0m09:35:14.707682 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Yara\Desktop\test_dbt\GYB_test\dbt_project.yml
+[0m09:35:14.711013 [info ] [MainThread]: adapter type: duckdb
+[0m09:35:14.711013 [info ] [MainThread]: adapter version: 1.8.3
+[0m09:35:14.787007 [info ] [MainThread]: Configuration:
+[0m09:35:14.787007 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:35:14.788056 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:35:14.788056 [info ] [MainThread]: Required dependencies:
+[0m09:35:14.789138 [debug] [MainThread]: Executing "git --help"
+[0m09:35:14.827241 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:35:14.827241 [debug] [MainThread]: STDERR: "b''"
+[0m09:35:14.828294 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:35:14.828681 [info ] [MainThread]: Connection:
+[0m09:35:14.829186 [info ] [MainThread]:   database: dev
+[0m09:35:14.829186 [info ] [MainThread]:   schema: main
+[0m09:35:14.830195 [info ] [MainThread]:   path: dev.duckdb
+[0m09:35:14.830195 [info ] [MainThread]:   config_options: None
+[0m09:35:14.831259 [info ] [MainThread]:   extensions: None
+[0m09:35:14.831259 [info ] [MainThread]:   settings: {}
+[0m09:35:14.831259 [info ] [MainThread]:   external_root: .
+[0m09:35:14.832357 [info ] [MainThread]:   use_credential_provider: None
+[0m09:35:14.832357 [info ] [MainThread]:   attach: None
+[0m09:35:14.833355 [info ] [MainThread]:   filesystems: None
+[0m09:35:14.833355 [info ] [MainThread]:   remote: None
+[0m09:35:14.833355 [info ] [MainThread]:   plugins: None
+[0m09:35:14.834408 [info ] [MainThread]:   disable_transactions: False
+[0m09:35:14.834408 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m09:35:14.835434 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m09:35:14.889138 [debug] [MainThread]: Using duckdb connection "debug"
+[0m09:35:14.890178 [debug] [MainThread]: On debug: select 1 as id
+[0m09:35:14.890261 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:35:14.898917 [debug] [MainThread]: SQL status: OK in 0.009 seconds
+[0m09:35:14.899934 [debug] [MainThread]: On debug: Close
+[0m09:35:14.902046 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m09:35:14.903084 [info ] [MainThread]: [32mAll checks passed![0m
+[0m09:35:14.903178 [debug] [MainThread]: Command `dbt debug` succeeded at 09:35:14.903178 after 0.43 seconds
+[0m09:35:14.904176 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m09:35:14.904176 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281E5B88B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281E55E2120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281E7FA2900>]}
+[0m09:35:14.904176 [debug] [MainThread]: Flushing usage events
+[0m09:36:13.877618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F05359EF00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F054376900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F054376810>]}
+
+
+============================== 09:36:13.893240 | fd6f5ced-6011-4de0-87a3-f7cfaac6e18b ==============================
+[0m09:36:13.893240 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:36:13.893240 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:36:13.930864 [info ] [MainThread]: dbt version: 1.8.6
+[0m09:36:13.930864 [info ] [MainThread]: python version: 3.12.5
+[0m09:36:13.930864 [info ] [MainThread]: python path: C:\Users\Yara\AppData\Local\Programs\Python\Python312\python.exe
+[0m09:36:13.930864 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m09:36:13.938870 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m09:36:13.939867 [info ] [MainThread]: Using profiles dir at C:\Users\Yara\.dbt
+[0m09:36:13.939867 [info ] [MainThread]: Using profiles.yml file at C:\Users\Yara\.dbt\profiles.yml
+[0m09:36:13.940865 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Yara\Desktop\test_dbt\GYB_test\dbt_project.yml
+[0m09:36:14.039263 [info ] [MainThread]: Configuration:
+[0m09:36:14.039263 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m09:36:14.039263 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:36:14.039263 [info ] [MainThread]: Required dependencies:
+[0m09:36:14.039263 [debug] [MainThread]: Executing "git --help"
+[0m09:36:14.068121 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:36:14.068121 [debug] [MainThread]: STDERR: "b''"
+[0m09:36:14.068121 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:36:14.068121 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m09:36:14.068121 [info ] [MainThread]: [31m1 check failed:[0m
+[0m09:36:14.068121 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "GYB_test", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+
+
+[0m09:36:14.068121 [debug] [MainThread]: Command `dbt debug` failed at 09:36:14.068121 after 0.26 seconds
+[0m09:36:14.068121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F053B93BC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0543FA570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0544D66C0>]}
+[0m09:36:14.068121 [debug] [MainThread]: Flushing usage events
+[0m09:39:04.292801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FA0508C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FA2E868A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FA2E86690>]}
+
+
+============================== 09:39:04.292801 | a198aa29-89f2-4ef3-affd-c0b7a3bdfb48 ==============================
+[0m09:39:04.292801 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:39:04.292801 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m09:39:04.311765 [info ] [MainThread]: dbt version: 1.8.6
+[0m09:39:04.311765 [info ] [MainThread]: python version: 3.12.5
+[0m09:39:04.311765 [info ] [MainThread]: python path: C:\Users\Yara\AppData\Local\Programs\Python\Python312\python.exe
+[0m09:39:04.311765 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m09:39:04.318556 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m09:39:04.318556 [info ] [MainThread]: Using profiles dir at C:\Users\Yara\.dbt
+[0m09:39:04.318556 [info ] [MainThread]: Using profiles.yml file at C:\Users\Yara\.dbt\profiles.yml
+[0m09:39:04.318556 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Yara\Desktop\test_dbt\GYB_test\dbt_project.yml
+[0m09:39:04.413625 [info ] [MainThread]: Configuration:
+[0m09:39:04.413625 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m09:39:04.413625 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:39:04.413625 [info ] [MainThread]: Required dependencies:
+[0m09:39:04.413625 [debug] [MainThread]: Executing "git --help"
+[0m09:39:04.450025 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:39:04.450025 [debug] [MainThread]: STDERR: "b''"
+[0m09:39:04.450025 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:39:04.451050 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m09:39:04.452047 [info ] [MainThread]: [31m1 check failed:[0m
+[0m09:39:04.452047 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "GYB_test", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+
+
+[0m09:39:04.453046 [debug] [MainThread]: Command `dbt debug` failed at 09:39:04.453046 after 0.28 seconds
+[0m09:39:04.453046 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FA2651940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F9F625AF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FA262F500>]}
+[0m09:39:04.454070 [debug] [MainThread]: Flushing usage events
+[0m09:40:36.053496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025311C18C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253143A7C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025313DB3110>]}
+
+
+============================== 09:40:36.069118 | fe3b6d42-277f-4bc9-b0b8-b736c9504c6b ==============================
+[0m09:40:36.069118 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:40:36.069118 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m09:40:36.086266 [info ] [MainThread]: dbt version: 1.8.6
+[0m09:40:36.086266 [info ] [MainThread]: python version: 3.12.5
+[0m09:40:36.086266 [info ] [MainThread]: python path: C:\Users\Yara\AppData\Local\Programs\Python\Python312\python.exe
+[0m09:40:36.086266 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m09:40:36.093114 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m09:40:36.093114 [info ] [MainThread]: Using profiles dir at C:\Users\Yara\.dbt
+[0m09:40:36.093114 [info ] [MainThread]: Using profiles.yml file at C:\Users\Yara\.dbt\profiles.yml
+[0m09:40:36.093114 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Yara\Desktop\test_dbt\GYB_test\dbt_project.yml
+[0m09:40:36.194873 [info ] [MainThread]: Configuration:
+[0m09:40:36.194873 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m09:40:36.194873 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:40:36.194873 [info ] [MainThread]: Required dependencies:
+[0m09:40:36.194873 [debug] [MainThread]: Executing "git --help"
+[0m09:40:36.224998 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:40:36.224998 [debug] [MainThread]: STDERR: "b''"
+[0m09:40:36.224998 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:40:36.224998 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m09:40:36.224998 [info ] [MainThread]: [31m1 check failed:[0m
+[0m09:40:36.224998 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "GYB_test", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+
+
+[0m09:40:36.230570 [debug] [MainThread]: Command `dbt debug` failed at 09:40:36.230570 after 0.28 seconds
+[0m09:40:36.230570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025311C18C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253119A5670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253146F6900>]}
+[0m09:40:36.231493 [debug] [MainThread]: Flushing usage events
+[0m09:45:33.220430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001478651BFE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014784197B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000147878208C0>]}
+
+
+============================== 09:45:33.223446 | 0a692208-900c-454d-bf20-54c2e4c7fa4f ==============================
+[0m09:45:33.223446 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:45:33.224444 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:45:33.236683 [info ] [MainThread]: dbt version: 1.8.6
+[0m09:45:33.236683 [info ] [MainThread]: python version: 3.12.5
+[0m09:45:33.237680 [info ] [MainThread]: python path: C:\Users\Yara\dbt-venv\Scripts\python.exe
+[0m09:45:33.237680 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m09:45:33.344734 [info ] [MainThread]: Using profiles dir at C:\Users\Yara\.dbt
+[0m09:45:33.344734 [info ] [MainThread]: Using profiles.yml file at C:\Users\Yara\.dbt\profiles.yml
+[0m09:45:33.345794 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Yara\Desktop\test_dbt\GYB_test\dbt_project.yml
+[0m09:45:33.348492 [info ] [MainThread]: adapter type: duckdb
+[0m09:45:33.349490 [info ] [MainThread]: adapter version: 1.8.3
+[0m09:45:33.424763 [info ] [MainThread]: Configuration:
+[0m09:45:33.424763 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:45:33.425896 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:45:33.426920 [info ] [MainThread]: Required dependencies:
+[0m09:45:33.426920 [debug] [MainThread]: Executing "git --help"
+[0m09:45:33.452731 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:45:33.453728 [debug] [MainThread]: STDERR: "b''"
+[0m09:45:33.453728 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:45:33.454796 [info ] [MainThread]: Connection:
+[0m09:45:33.454796 [info ] [MainThread]:   database: dev
+[0m09:45:33.455793 [info ] [MainThread]:   schema: main
+[0m09:45:33.455793 [info ] [MainThread]:   path: C:\Users\Yara\Desktop\test_dbt\GYB_test\dev.duckdb
+[0m09:45:33.455793 [info ] [MainThread]:   config_options: None
+[0m09:45:33.456790 [info ] [MainThread]:   extensions: None
+[0m09:45:33.456790 [info ] [MainThread]:   settings: {}
+[0m09:45:33.456790 [info ] [MainThread]:   external_root: .
+[0m09:45:33.457835 [info ] [MainThread]:   use_credential_provider: None
+[0m09:45:33.457835 [info ] [MainThread]:   attach: None
+[0m09:45:33.457835 [info ] [MainThread]:   filesystems: None
+[0m09:45:33.458855 [info ] [MainThread]:   remote: None
+[0m09:45:33.458855 [info ] [MainThread]:   plugins: None
+[0m09:45:33.458855 [info ] [MainThread]:   disable_transactions: False
+[0m09:45:33.459868 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m09:45:33.459868 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m09:45:33.515496 [debug] [MainThread]: Using duckdb connection "debug"
+[0m09:45:33.515496 [debug] [MainThread]: On debug: select 1 as id
+[0m09:45:33.515496 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:45:33.525284 [debug] [MainThread]: SQL status: OK in 0.009 seconds
+[0m09:45:33.526282 [debug] [MainThread]: On debug: Close
+[0m09:45:33.528363 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m09:45:33.528363 [info ] [MainThread]: [32mAll checks passed![0m
+[0m09:45:33.529361 [debug] [MainThread]: Command `dbt debug` succeeded at 09:45:33.529361 after 0.41 seconds
+[0m09:45:33.529361 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m09:45:33.530384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014787BF7950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014783750890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014783750F20>]}
+[0m09:45:33.530464 [debug] [MainThread]: Flushing usage events
+[0m09:45:50.437521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEEB12F30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEAB50E60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEBBA1280>]}
+
+
+============================== 09:45:50.440570 | 317ebfe9-588b-4837-a20d-339cf25f92b3 ==============================
+[0m09:45:50.440570 [info ] [MainThread]: Running with dbt=1.8.6
+[0m09:45:50.441592 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Yara\\Desktop\\test_dbt\\GYB_test\\logs', 'profiles_dir': 'C:\\Users\\Yara\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:45:50.635960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '317ebfe9-588b-4837-a20d-339cf25f92b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEF626570>]}
+[0m09:45:50.684328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '317ebfe9-588b-4837-a20d-339cf25f92b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEEEE6A50>]}
+[0m09:45:50.687446 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m09:45:50.694586 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m09:45:50.781932 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m09:45:50.783197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '317ebfe9-588b-4837-a20d-339cf25f92b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEF7C7950>]}
+[0m09:45:51.814342 [warn ] [MainThread]: [[33mWARNING[0m]: Found spaces in the name of `analysis.GYB_test.Agent
+Performance`
+[0m09:45:51.815340 [warn ] [MainThread]: [[33mWARNING[0m]: Spaces found in 4 resource name(s). This is deprecated, and
+may lead to errors when using dbt. For more information: https://docs.getdbt.com
+/reference/global-configs/legacy-behaviors#require_resource_names_without_spaces
+Run again with `--debug` to see them all.
+[0m09:45:51.815340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '317ebfe9-588b-4837-a20d-339cf25f92b3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEFA8A900>]}
+[0m09:45:51.816441 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.GYB_test.example
+[0m09:45:51.820649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '317ebfe9-588b-4837-a20d-339cf25f92b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEFF24650>]}
+[0m09:45:51.900585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '317ebfe9-588b-4837-a20d-339cf25f92b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEFF1B6E0>]}
+[0m09:45:51.900585 [info ] [MainThread]: Found 1 model, 3 analyses, 1 seed, 410 macros
+[0m09:45:51.901613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '317ebfe9-588b-4837-a20d-339cf25f92b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEFB5A180>]}
+[0m09:45:51.903658 [info ] [MainThread]: 
+[0m09:45:51.903658 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m09:45:51.904655 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m09:45:52.000346 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m09:45:52.000346 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"dev"'
+    
+  
+  
+[0m09:45:52.000346 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:45:52.010103 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m09:45:52.011227 [debug] [ThreadPool]: On list_dev: Close
+[0m09:45:52.014242 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m09:45:52.015322 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m09:45:52.020361 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:45:52.020361 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='dev'
+        and type='sqlite'
+    
+  
+[0m09:45:52.020361 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:45:52.029500 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m09:45:52.031585 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:45:52.031585 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m09:45:52.031585 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:45:52.032633 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:45:52.032633 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m09:45:52.032633 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:45:52.033629 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m09:45:52.033629 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:45:52.034627 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m09:45:52.034627 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:45:52.034627 [debug] [ThreadPool]: On create_dev_main: Close
+[0m09:45:52.041683 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m09:45:52.045795 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:45:52.045795 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m09:45:52.046808 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:45:52.054951 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m09:45:52.054951 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:45:52.055949 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'dev'
+  
+[0m09:45:52.092288 [debug] [ThreadPool]: SQL status: OK in 0.036 seconds
+[0m09:45:52.098549 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m09:45:52.099560 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m09:45:52.099560 [debug] [ThreadPool]: On list_dev_main: Close
+[0m09:45:52.103694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '317ebfe9-588b-4837-a20d-339cf25f92b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCF04F02F0>]}
+[0m09:45:52.104694 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:45:52.104694 [debug] [MainThread]: On master: BEGIN
+[0m09:45:52.104694 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:45:52.113256 [debug] [MainThread]: SQL status: OK in 0.008 seconds
+[0m09:45:52.113256 [debug] [MainThread]: On master: COMMIT
+[0m09:45:52.113256 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:45:52.114332 [debug] [MainThread]: On master: COMMIT
+[0m09:45:52.114332 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m09:45:52.114332 [debug] [MainThread]: On master: Close
+[0m09:45:52.117659 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:45:52.117659 [info ] [MainThread]: 
+[0m09:45:52.120849 [debug] [Thread-1 (]: Began running node model.GYB_test.fct_sales
+[0m09:45:52.120849 [info ] [Thread-1 (]: 1 of 1 START sql view model main.fct_sales ..................................... [RUN]
+[0m09:45:52.121846 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.GYB_test.fct_sales'
+[0m09:45:52.121846 [debug] [Thread-1 (]: Began compiling node model.GYB_test.fct_sales
+[0m09:45:52.129002 [debug] [Thread-1 (]: Writing injected SQL for node "model.GYB_test.fct_sales"
+[0m09:45:52.130107 [debug] [Thread-1 (]: Began executing node model.GYB_test.fct_sales
+[0m09:45:52.156837 [debug] [Thread-1 (]: Writing runtime sql for node "model.GYB_test.fct_sales"
+[0m09:45:52.157835 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:45:52.157835 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: BEGIN
+[0m09:45:52.157835 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m09:45:52.167126 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m09:45:52.167126 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:45:52.167126 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+
+  
+  create view "dev"."main"."fct_sales__dbt_tmp" as (
+    with base_data as (
+    select
+        coalesce("Reference ID", 'N/A') as reference_id,
+        coalesce("Product Name", 'N/A') as product_name,
+        coalesce("Country", 'N/A') as country,
+        coalesce("Campaign Name", 'N/A') as campaign_name,
+        coalesce("Source", 'N/A') as source,
+        coalesce("Total Rebill Amount", 0) + coalesce("Total Amount ($)", 0) - coalesce("Returned Amount ($)", 0) as total_revenue,
+        coalesce("Total Rebill Amount", 0) as rebill_revenue,
+        coalesce("Number Of Rebills", 0) as rebill_count,
+        coalesce("Discount Amount ($)", 0) as discount_amount,
+        coalesce("Returned Amount ($)", 0) as returned_amount,
+        coalesce("Return Date Kyiv", 'N/A') as return_date_kyiv,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as return_date_utc,
+        coalesce(cast("Return Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as return_date_new_york,
+        coalesce("Order Date Kyiv", 'N/A') as order_date_kyiv,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'UTC', 'N/A') as order_date_utc,
+        coalesce(cast("Order Date Kyiv" as timestamp) at time zone 'America/New_York', 'N/A') as order_date_new_york
+    from "dev"."main"."Sample Data for GYB test - Query result"
+),
+
+sales_agents as (
+    select
+        coalesce(reference_id, 'N/A') as reference_id,
+        coalesce(string_agg(distinct "Sales Agent Name", ', '), 'N/A') as sales_agents
+    from "dev"."main"."Sample Data for GYB test - Query result"
+    group by reference_id
+)
+
+select
+    b.*,
+    a.sales_agents
+from base_data b
+left join sales_agents a
+on b.reference_id = a.reference_id
+  );
+
+[0m09:45:52.169170 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m09:45:52.174357 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:45:52.174357 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+alter view "dev"."main"."fct_sales" rename to "fct_sales__dbt_backup"
+[0m09:45:52.175354 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m09:45:52.177450 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:45:52.177450 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+alter view "dev"."main"."fct_sales__dbt_tmp" rename to "fct_sales"
+[0m09:45:52.178502 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m09:45:52.191873 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: COMMIT
+[0m09:45:52.191873 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:45:52.192929 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: COMMIT
+[0m09:45:52.206509 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m09:45:52.210566 [debug] [Thread-1 (]: Using duckdb connection "model.GYB_test.fct_sales"
+[0m09:45:52.210566 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "GYB_test", "target_name": "dev", "node_id": "model.GYB_test.fct_sales"} */
+drop view if exists "dev"."main"."fct_sales__dbt_backup" cascade
+[0m09:45:52.212752 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m09:45:52.214834 [debug] [Thread-1 (]: On model.GYB_test.fct_sales: Close
+[0m09:45:52.222331 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '317ebfe9-588b-4837-a20d-339cf25f92b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEFAA95B0>]}
+[0m09:45:52.223341 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.fct_sales ................................ [[32mOK[0m in 0.10s]
+[0m09:45:52.224339 [debug] [Thread-1 (]: Finished running node model.GYB_test.fct_sales
+[0m09:45:52.225443 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:45:52.225443 [debug] [MainThread]: On master: BEGIN
+[0m09:45:52.226441 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:45:52.238913 [debug] [MainThread]: SQL status: OK in 0.012 seconds
+[0m09:45:52.238913 [debug] [MainThread]: On master: COMMIT
+[0m09:45:52.238913 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:45:52.238913 [debug] [MainThread]: On master: COMMIT
+[0m09:45:52.239911 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m09:45:52.239911 [debug] [MainThread]: On master: Close
+[0m09:45:52.241964 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:45:52.242961 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m09:45:52.243016 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m09:45:52.243016 [debug] [MainThread]: Connection 'model.GYB_test.fct_sales' was properly closed.
+[0m09:45:52.243016 [info ] [MainThread]: 
+[0m09:45:52.243969 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.34 seconds (0.34s).
+[0m09:45:52.243969 [debug] [MainThread]: Command end result
+[0m09:45:52.266569 [info ] [MainThread]: 
+[0m09:45:52.267569 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:45:52.267569 [info ] [MainThread]: 
+[0m09:45:52.268618 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m09:45:52.269836 [debug] [MainThread]: Command `dbt run` succeeded at 09:45:52.269836 after 1.91 seconds
+[0m09:45:52.269836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEB454680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEFA894F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BCEFA8A210>]}
+[0m09:45:52.269836 [debug] [MainThread]: Flushing usage events
